@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6jim63nu4002"
+path="res://.godot/imported/magic cliffs.mp3-ed3deae4ec277e93ad9175485422d707.mp3str"
+
+[deps]
+
+source_file="res://Forest of Illusion Files/Forest of Illusion Files/Layers/Magic-Cliffs-Gamekit/Magic-Cliffs-Gamekit/magic cliffs music/magic cliffs.mp3"
+dest_files=["res://.godot/imported/magic cliffs.mp3-ed3deae4ec277e93ad9175485422d707.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
