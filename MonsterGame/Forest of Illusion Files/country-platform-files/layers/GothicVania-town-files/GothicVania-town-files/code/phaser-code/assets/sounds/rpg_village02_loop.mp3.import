@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://2iuf00y8v1mv"
+path="res://.godot/imported/rpg_village02_loop.mp3-607cf60a9dca53270476139a7a1fbdaf.mp3str"
+
+[deps]
+
+source_file="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/GothicVania-town-files/code/phaser-code/assets/sounds/rpg_village02_loop.mp3"
+dest_files=["res://.godot/imported/rpg_village02_loop.mp3-607cf60a9dca53270476139a7a1fbdaf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

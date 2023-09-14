@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ckqpyprbl2n2f"
+path="res://.godot/imported/switch.ogg-347cb7514e58271a64d0f9561d0cf9f5.oggvorbisstr"
+
+[deps]
+
+source_file="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/code/phaser-code/assets/sounds/switch.ogg"
+dest_files=["res://.godot/imported/switch.ogg-347cb7514e58271a64d0f9561d0cf9f5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

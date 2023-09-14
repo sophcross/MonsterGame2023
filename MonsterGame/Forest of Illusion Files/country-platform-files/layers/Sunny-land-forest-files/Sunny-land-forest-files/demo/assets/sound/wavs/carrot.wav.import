@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://6i57yjqhsvwu"
+path="res://.godot/imported/carrot.wav-331d1759cf96a964538407bfb4ee1b5c.sample"
+
+[deps]
+
+source_file="res://Forest of Illusion Files/country-platform-files/layers/Sunny-land-forest-files/Sunny-land-forest-files/demo/assets/sound/wavs/carrot.wav"
+dest_files=["res://.godot/imported/carrot.wav-331d1759cf96a964538407bfb4ee1b5c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
