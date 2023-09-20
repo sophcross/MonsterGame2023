@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bptpugure3f5a"
+path="res://.godot/imported/jump.mp3-7f25af749cd4881c7713cf58b0282fcb.mp3str"
+
+[deps]
+
+source_file="res://Forest of Illusion Files/country-platform-files/layers/Sunny-land-forest-files/Sunny-land-forest-files/demo/assets/sound/jump.mp3"
+dest_files=["res://.godot/imported/jump.mp3-7f25af749cd4881c7713cf58b0282fcb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://0xusapiubqpv"
+path="res://.godot/imported/jump.wav-c2fc49dedb64829a1030134852d3b520.sample"
+
+[deps]
+
+source_file="res://Forest of Illusion Files/country-platform-files/layers/Sunny-land-forest-files/Sunny-land-forest-files/demo/assets/sound/wavs/jump.wav"
+dest_files=["res://.godot/imported/jump.wav-c2fc49dedb64829a1030134852d3b520.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

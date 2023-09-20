@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dhcgln4dqo65i"
+path="res://.godot/imported/rpg_village02__loop.ogg-51a325a53046b553333332ec455e382f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/code/phaser-code/assets/sounds/rpg_village02__loop.ogg"
+dest_files=["res://.godot/imported/rpg_village02__loop.ogg-51a325a53046b553333332ec455e382f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
