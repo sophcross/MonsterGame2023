@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bbchpqm1w86d0"]
+[gd_scene load_steps=30 format=3 uid="uid://bbchpqm1w86d0"]
 
 [ext_resource type="Texture2D" uid="uid://bdlhwksy8w3jm" path="res://Forest of Illusion Files/Forest of Illusion Files/Layers/tiles.png" id="1_bvuak"]
 [ext_resource type="Texture2D" uid="uid://dymyu0a4otnbb" path="res://Forest of Illusion Files/Forest of Illusion Files/Layers/Magic-Cliffs-Gamekit/Magic-Cliffs-Gamekit/Environment/PNG/tileset.png" id="2_ty1f4"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://r543h4mt8h7k" path="res://Forest of Illusion Files/country-platform-files/layers/Sunny-land-forest-files/Sunny-land-forest-files/PNG/environment/props/house.png" id="9_pfyq3"]
 [ext_resource type="Texture2D" uid="uid://bo85sakegc43n" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/tileset.png" id="10_1c0y4"]
 [ext_resource type="Texture2D" uid="uid://0xemkmocbk2r" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/GothicVania-town-files/PNG/environment/props/houses.png" id="11_0vxos"]
+[ext_resource type="Texture2D" uid="uid://dt4ui15p8f8vk" path="res://Forest of Illusion Files/Forest of Illusion Files/Layers/back.png" id="14_bt38f"]
+[ext_resource type="Texture2D" uid="uid://dle0x13nxm5ds" path="res://Forest of Illusion Files/Forest of Illusion Files/Layers/middle.png" id="15_m725u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7sfns"]
 texture = ExtResource("1_bvuak")
@@ -6147,3 +6149,23 @@ layer_0/tile_data = PackedInt32Array(-5, 65536, 0, 65531, 65536, 1, 131067, 6553
 
 [node name="TileMap2" type="TileMap" parent="."]
 format = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+motion_mirroring = Vector2(272, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2(131, -203)
+scale = Vector2(5.03906, 2.76287)
+texture = ExtResource("14_bt38f")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+motion_mirroring = Vector2(272, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer2"]
+position = Vector2(386, -212)
+scale = Vector2(3.45313, 2.13603)
+texture = ExtResource("15_m725u")
