@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bbchpqm1w86d0"]
+[gd_scene load_steps=33 format=3 uid="uid://bbchpqm1w86d0"]
 
 [ext_resource type="Texture2D" uid="uid://bdlhwksy8w3jm" path="res://Forest of Illusion Files/Forest of Illusion Files/Layers/tiles.png" id="1_bvuak"]
 [ext_resource type="Texture2D" uid="uid://dymyu0a4otnbb" path="res://Forest of Illusion Files/Forest of Illusion Files/Layers/Magic-Cliffs-Gamekit/Magic-Cliffs-Gamekit/Environment/PNG/tileset.png" id="2_ty1f4"]
@@ -13,7 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://r543h4mt8h7k" path="res://Forest of Illusion Files/country-platform-files/layers/Sunny-land-forest-files/Sunny-land-forest-files/PNG/environment/props/house.png" id="9_pfyq3"]
 [ext_resource type="Texture2D" uid="uid://bo85sakegc43n" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/tileset.png" id="10_1c0y4"]
 [ext_resource type="Texture2D" uid="uid://0xemkmocbk2r" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/GothicVania-town-files/PNG/environment/props/houses.png" id="11_0vxos"]
-[ext_resource type="PackedScene" uid="uid://dnw3wc2snka3v" path="res://Player_Files/lil_guy_player.tscn" id="14_b8ucx"]
+[ext_resource type="Texture2D" uid="uid://dt4ui15p8f8vk" path="res://Forest of Illusion Files/Forest of Illusion Files/Layers/back.png" id="14_bt38f"]
+[ext_resource type="Texture2D" uid="uid://dle0x13nxm5ds" path="res://Forest of Illusion Files/Forest of Illusion Files/Layers/middle.png" id="15_m725u"]
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="16_fwr0t"]
+[ext_resource type="Texture2D" uid="uid://c7v1volq037ob" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/player/run/player-run-1.png" id="17_ynyut"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7sfns"]
 texture = ExtResource("1_bvuak")
@@ -72,7 +75,6 @@ texture = ExtResource("1_bvuak")
 9:1/0 = 0
 9:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:1/0/physics_layer_0/angular_velocity = 0.0
-9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:2/0 = 0
 1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:2/0/physics_layer_0/angular_velocity = 0.0
@@ -606,6 +608,7 @@ texture = ExtResource("2_ty1f4")
 14:6/0 = 0
 14:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 14:6/0/physics_layer_0/angular_velocity = 0.0
+14:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -5.4375, -4.75)
 15:6/0 = 0
 15:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:6/0/physics_layer_0/angular_velocity = 0.0
@@ -708,9 +711,11 @@ texture = ExtResource("2_ty1f4")
 15:7/0 = 0
 15:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:7/0/physics_layer_0/angular_velocity = 0.0
+15:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -5.4375, -4.75)
 16:7/0 = 0
 16:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 16:7/0/physics_layer_0/angular_velocity = 0.0
+16:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:7/0 = 0
 17:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 17:7/0/physics_layer_0/angular_velocity = 0.0
@@ -810,6 +815,7 @@ texture = ExtResource("2_ty1f4")
 16:8/0 = 0
 16:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 16:8/0/physics_layer_0/angular_velocity = 0.0
+16:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 22:8/0 = 0
 22:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 22:8/0/physics_layer_0/angular_velocity = 0.0
@@ -873,6 +879,7 @@ texture = ExtResource("2_ty1f4")
 16:9/0 = 0
 16:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 16:9/0/physics_layer_0/angular_velocity = 0.0
+16:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 46:9/0 = 0
 46:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 46:9/0/physics_layer_0/angular_velocity = 0.0
@@ -4386,7 +4393,7 @@ texture = ExtResource("10_1c0y4")
 17:5/0 = 0
 17:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 17:5/0/physics_layer_0/angular_velocity = 0.0
-17:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -6.8125, 8, -6.6875, -2.875, -8, -3)
+17:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 18:5/0 = 0
 18:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 18:5/0/physics_layer_0/angular_velocity = 0.0
@@ -4394,12 +4401,15 @@ texture = ExtResource("10_1c0y4")
 20:5/0 = 0
 20:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 20:5/0/physics_layer_0/angular_velocity = 0.0
+20:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 22:5/0 = 0
 22:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 22:5/0/physics_layer_0/angular_velocity = 0.0
+22:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 23:5/0 = 0
 23:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 23:5/0/physics_layer_0/angular_velocity = 0.0
+23:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 25:5/0 = 0
 25:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 25:5/0/physics_layer_0/angular_velocity = 0.0
@@ -4441,9 +4451,11 @@ texture = ExtResource("10_1c0y4")
 22:6/0 = 0
 22:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 22:6/0/physics_layer_0/angular_velocity = 0.0
+22:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 23:6/0 = 0
 23:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 23:6/0/physics_layer_0/angular_velocity = 0.0
+23:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:7/0 = 0
 1:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:7/0/physics_layer_0/angular_velocity = 0.0
@@ -6139,6 +6151,8 @@ sources/10 = SubResource("TileSetAtlasSource_j5oe6")
 sources/11 = SubResource("TileSetAtlasSource_a32ka")
 sources/12 = SubResource("TileSetAtlasSource_cbing")
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ts1mw"]
+
 [node name="ForestLevel" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -6150,5 +6164,36 @@ layer_0/tile_data = PackedInt32Array(-5, 65536, 0, 65531, 65536, 1, 131067, 6553
 [node name="TileMap2" type="TileMap" parent="."]
 format = 2
 
-[node name="LilGuy-Player" parent="." instance=ExtResource("14_b8ucx")]
-position = Vector2(-18, -18)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(385, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2(159, -35)
+scale = Vector2(2.89063, 2.64614)
+texture = ExtResource("14_bt38f")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+motion_mirroring = Vector2(491, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer2"]
+position = Vector2(278, -193.5)
+scale = Vector2(1.79687, 1.96691)
+texture = ExtResource("15_m725u")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-40, -20)
+script = ExtResource("16_fwr0t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_ts1mw")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(2.5, 2.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("17_ynyut")
