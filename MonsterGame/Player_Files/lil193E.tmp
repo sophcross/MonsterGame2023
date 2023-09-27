@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dnw3wc2snka3v"]
+[gd_scene load_steps=32 format=3 uid="uid://dnw3wc2snka3v"]
 
 [ext_resource type="Texture2D" uid="uid://d2mehmdpkx5qh" path="res://Player_Files/Lil'Guy/Walking/Walking-Frame-1.png" id="1_5b2pd"]
 [ext_resource type="Script" path="res://Player_Files/lil_guy_player.gd" id="1_y5mlh"]
@@ -39,7 +39,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_62iy0")
 }],
-"loop": false,
+"loop": true,
 "name": &"Fall",
 "speed": 5.0
 }, {
@@ -76,23 +76,15 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("14_v447t")
 }],
-"loop": false,
-"name": &"Jump",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("14_v447t")
-}],
 "loop": true,
-"name": &"Jump_Loop",
+"name": &"Jump",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("15_uxqh0")
 }],
-"loop": false,
+"loop": true,
 "name": &"Spit",
 "speed": 5.0
 }, {
@@ -103,7 +95,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("17_c25fs")
 }],
-"loop": false,
+"loop": true,
 "name": &"Toss",
 "speed": 5.0
 }, {
@@ -175,9 +167,9 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4]
 }
 
-[sub_resource type="Animation" id="Animation_he34a"]
-resource_name = "Fall"
-length = 2.40001
+[sub_resource type="Animation" id="Animation_u3y4n"]
+resource_name = "Jump"
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -185,7 +177,23 @@ tracks/0/path = NodePath("AnimatedSprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 2.4),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 3]
+}
+
+[sub_resource type="Animation" id="Animation_he34a"]
+resource_name = "Fall"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 3]
@@ -223,44 +231,11 @@ tracks/0/keys = {
 "values": [0, 1, 0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_aki6f"]
-resource_name = "Jump_Loop"
-length = 1.20001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 0]
-}
-
-[sub_resource type="Animation" id="Animation_u3y4n"]
-resource_name = "Jump_Start"
-length = 2.40001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 2.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 3]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_diksv"]
 _data = {
 "Fall": SubResource("Animation_he34a"),
 "Idle": SubResource("Animation_t466e"),
-"Jump_Loop": SubResource("Animation_aki6f"),
-"Jump_Start": SubResource("Animation_u3y4n"),
+"Jump": SubResource("Animation_u3y4n"),
 "RESET": SubResource("Animation_41irg"),
 "Spit": SubResource("Animation_t5syk"),
 "Toss": SubResource("Animation_lnc3a"),
@@ -280,9 +255,11 @@ shape = SubResource("CapsuleShape2D_oa7ps")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_76i0p")
 animation = &"Jump"
+autoplay = "Idle"
 frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Walking"
 libraries = {
 "": SubResource("AnimationLibrary_diksv")
 }
@@ -291,5 +268,3 @@ libraries = {
 position = Vector2(9, -54)
 offset = Vector2(0, 2)
 zoom = Vector2(2.5, 2.5)
-
-[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
