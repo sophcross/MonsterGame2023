@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@export var speed: float = 300.0
-@export var jump_velocity: float = -400.0
+@export var speed: float = 150.0
+@export var jump_velocity: float = -200.0
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
