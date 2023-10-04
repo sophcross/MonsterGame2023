@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr0jq5n17w06n"
-path="res://.godot/imported/tileset.png-7f89c88c01d90a04f5dde4aeab034aa2.ctex"
+uid="uid://umv1hmjmmhd"
+path="res://.godot/imported/walls_side_top_far.png-23fa2ca55d2eb88d0ba35c9cce8e2cb8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Evironment/tileset.png"
-dest_files=["res://.godot/imported/tileset.png-7f89c88c01d90a04f5dde4aeab034aa2.ctex"]
+source_file="res://Evironment/Castle/walls_side_top_far.png"
+dest_files=["res://.godot/imported/walls_side_top_far.png-23fa2ca55d2eb88d0ba35c9cce8e2cb8.ctex"]
 
 [params]
 
