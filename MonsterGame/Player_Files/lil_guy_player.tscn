@@ -289,7 +289,7 @@ libraries = {
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(9, -54)
-offset = Vector2(0, 25)
-zoom = Vector2(3, 3)
+offset = Vector2(0, 2)
+zoom = Vector2(2.4, 2.4)
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
