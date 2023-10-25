@@ -60,8 +60,8 @@ Down={
 
 [layer_names]
 
-2d_physics/layer_1="Land"
-2d_physics/layer_2="ONeWay"
+2d_physics/layer_1="Props"
+2d_physics/layer_2="Land"
 2d_physics/layer_3="OneWay"
 2d_physics/layer_4="Ladder"
 2d_physics/layer_5="Houses"

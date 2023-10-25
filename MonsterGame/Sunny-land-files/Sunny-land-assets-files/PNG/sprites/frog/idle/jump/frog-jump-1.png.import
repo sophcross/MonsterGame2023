@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://php8hpjj35jd"
-path="res://.godot/imported/frog-jump-1.png-8e06538e087efc0c577d305cf919d7d3.ctex"
+path="res://.godot/imported/frog-jump-1.png-7fe64c89aa9b47ffde4ef77eaf8d5470.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/jump/frog-jump-1.png"
-dest_files=["res://.godot/imported/frog-jump-1.png-8e06538e087efc0c577d305cf919d7d3.ctex"]
+source_file="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/jump/frog-jump-1.png"
+dest_files=["res://.godot/imported/frog-jump-1.png-7fe64c89aa9b47ffde4ef77eaf8d5470.ctex"]
 
 [params]
 

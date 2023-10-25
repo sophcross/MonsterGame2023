@@ -1,0 +1,148 @@
+[gd_scene load_steps=15 format=3 uid="uid://bk8yjofpkuukr"]
+
+[ext_resource type="Script" path="res://Enemy/tutenemy.gd" id="1_riihh"]
+[ext_resource type="Texture2D" uid="uid://brwx3id5nihf4" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-1.png" id="2_pckaa"]
+[ext_resource type="Texture2D" uid="uid://7dlj3ufhucuv" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-2.png" id="3_jcdcg"]
+[ext_resource type="Texture2D" uid="uid://cjjsc5rbjkha6" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-3.png" id="4_n2grw"]
+[ext_resource type="Texture2D" uid="uid://kfpg350fjmap" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-4.png" id="5_qst2u"]
+[ext_resource type="Texture2D" uid="uid://php8hpjj35jd" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/jump/frog-jump-1.png" id="6_glekc"]
+[ext_resource type="Texture2D" uid="uid://bx661dha7quu0" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/jump/frog-jump-2.png" id="7_65oc4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bpr4v"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_itebs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pckaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jcdcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n2grw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qst2u")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_glekc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_65oc4")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_dcvys"]
+resource_name = "Chase"
+length = 0.70001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Walk"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_tya6x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_letkw"]
+resource_name = "Idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Idle"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a4skb"]
+_data = {
+"Chase": SubResource("Animation_dcvys"),
+"Idle": SubResource("Animation_letkw"),
+"RESET": SubResource("Animation_tya6x")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_egld4"]
+radius = 84.006
+
+[node name="tutenemy" type="CharacterBody2D"]
+script = ExtResource("1_riihh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_bpr4v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_itebs")
+animation = &"Walk"
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_a4skb")
+}
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+shape = SubResource("CircleShape2D_egld4")
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]

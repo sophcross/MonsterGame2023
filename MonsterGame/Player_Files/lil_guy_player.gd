@@ -11,6 +11,8 @@ var animation_locked: bool = false
 var direction: Vector2 = Vector2.ZERO
 var was_in_air: bool = false
 
+var on_ladder = false
+
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -64,3 +66,15 @@ func land():
 	animated_sprite.play("Fall")
 	animation_locked = true
 
+func should_climb_ladder() -> bool:
+	if on_ladder and (Input.is_action_pressed("Up") or Input.is_action_pressed("Down")):
+		return true
+	else:
+		return false
+
+func _on_ladder_checker_body_entered(body):
+	on_ladder = true
+
+
+func _on_ladder_checker_body_exited(body):
+	on_ladder = false
