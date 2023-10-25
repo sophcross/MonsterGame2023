@@ -151,6 +151,7 @@ debug_color = Color(0, 0.6, 0.701961, 0.419608)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_r6104")
 animation = &"Idle"
+frame = 1
 
 [node name="PlayerDetection" type="Area2D" parent="."]
 
