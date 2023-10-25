@@ -262,11 +262,11 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y30h6"]
 radius = 8.0
-height = 22.0
+height = 20.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c47tn"]
 radius = 8.0
-height = 22.0
+height = 20.0
 
 [node name="Knight" type="CharacterBody2D"]
 script = ExtResource("1_u714h")
@@ -276,10 +276,10 @@ scale = Vector2(1.61073, 1.61073)
 sprite_frames = SubResource("SpriteFrames_w1ul1")
 animation = &"Run"
 autoplay = "Run"
-frame_progress = 0.947595
+frame_progress = 0.375456
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6)
+position = Vector2(0, 8)
 shape = SubResource("CapsuleShape2D_y30h6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -287,5 +287,9 @@ shape = SubResource("CapsuleShape2D_y30h6")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 6)
+position = Vector2(0, 8)
 shape = SubResource("CapsuleShape2D_c47tn")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(10, 8)
+target_position = Vector2(0, 15)
