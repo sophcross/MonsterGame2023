@@ -1,0 +1,50 @@
+[gd_scene load_steps=10 format=3 uid="uid://qwu0l5uqpl5g"]
+
+[ext_resource type="Texture2D" uid="uid://y6dbi1hr2csi" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/bearded-walk/bearded-walk-1.png" id="1_8wu31"]
+[ext_resource type="Script" path="res://bestboy_boss.gd" id="1_db87b"]
+[ext_resource type="Texture2D" uid="uid://6vl3t33mx5hx" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/bearded-walk/bearded-walk-2.png" id="2_hnjpv"]
+[ext_resource type="Texture2D" uid="uid://bernvq2r7og6s" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/bearded-walk/bearded-walk-3.png" id="3_58m3p"]
+[ext_resource type="Texture2D" uid="uid://xv4ptexxtprq" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/bearded-walk/bearded-walk-4.png" id="4_e36op"]
+[ext_resource type="Texture2D" uid="uid://bawytc4k6y51j" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/bearded-walk/bearded-walk-5.png" id="5_gxqiu"]
+[ext_resource type="Texture2D" uid="uid://dld411ddsj17w" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/bearded-walk/bearded-walk-6.png" id="6_svd3k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w0psg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8wu31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hnjpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_58m3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_e36op")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gxqiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_svd3k")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5550y"]
+radius = 13.0
+height = 42.0
+
+[node name="bestboy_boss" type="CharacterBody2D"]
+script = ExtResource("1_db87b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_w0psg")
+animation = &"Walking"
+frame_progress = 0.000657899
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_5550y")

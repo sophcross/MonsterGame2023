@@ -1,0 +1,75 @@
+[gd_scene load_steps=16 format=3 uid="uid://c7ltf3dhhw5x7"]
+
+[ext_resource type="Script" path="res://oldman_enemy.gd" id="1_7ylbb"]
+[ext_resource type="Texture2D" uid="uid://bira8e6sn8hvn" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/oldman-walk/oldman-walk-1.png" id="2_5e05d"]
+[ext_resource type="Texture2D" uid="uid://dcjl203cimpi6" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/oldman-walk/oldman-walk-2.png" id="3_v1u48"]
+[ext_resource type="Texture2D" uid="uid://dplqcm0wjvb1h" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/oldman-walk/oldman-walk-3.png" id="4_0vkt8"]
+[ext_resource type="Texture2D" uid="uid://dp16e3huq5lnl" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/oldman-walk/oldman-walk-4.png" id="5_qjlr4"]
+[ext_resource type="Texture2D" uid="uid://eke4olns0yvn" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/oldman-walk/oldman-walk-5.png" id="6_1450e"]
+[ext_resource type="Texture2D" uid="uid://wymynl2s3hla" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/oldman-walk/oldman-walk-6.png" id="7_fro02"]
+[ext_resource type="Texture2D" uid="uid://d3jb4k4eldolj" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/oldman-walk/oldman-walk-7.png" id="8_mnxok"]
+[ext_resource type="Texture2D" uid="uid://c78w0lql8ggjj" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/oldman-walk/oldman-walk-8.png" id="9_0wnfa"]
+[ext_resource type="Texture2D" uid="uid://cvklteu3uly5m" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/oldman-walk/oldman-walk-9.png" id="10_mgyaa"]
+[ext_resource type="Texture2D" uid="uid://b3tfhgu55k6nr" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/oldman-walk/oldman-walk-10.png" id="11_ql645"]
+[ext_resource type="Texture2D" uid="uid://butfpt4dh1hh" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/oldman-walk/oldman-walk-11.png" id="12_flgpv"]
+[ext_resource type="Texture2D" uid="uid://dq64u34kw1r6f" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/oldman-walk/oldman-walk-12.png" id="13_eti7c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dxwo4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5e05d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v1u48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0vkt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qjlr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1450e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fro02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mnxok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0wnfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mgyaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ql645")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_flgpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_eti7c")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_naaay"]
+radius = 13.0
+height = 44.0
+
+[node name="oldman_enemy" type="CharacterBody2D"]
+script = ExtResource("1_7ylbb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dxwo4")
+animation = &"Walking"
+frame = 1
+frame_progress = 0.281716
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_naaay")

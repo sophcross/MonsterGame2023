@@ -1,0 +1,51 @@
+[gd_scene load_steps=10 format=3 uid="uid://cflbhxgeslfeh"]
+
+[ext_resource type="Script" path="res://woman_enemy.gd" id="1_lnf1j"]
+[ext_resource type="Texture2D" uid="uid://r12jqw25upj8" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/woman-walk/woman-walk-1.png" id="1_o4sig"]
+[ext_resource type="Texture2D" uid="uid://du22771a2qe4q" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/woman-walk/woman-walk-2.png" id="2_egw34"]
+[ext_resource type="Texture2D" uid="uid://dthn5sjrlxeir" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/woman-walk/woman-walk-3.png" id="3_nm35u"]
+[ext_resource type="Texture2D" uid="uid://dtx72efok77ei" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/woman-walk/woman-walk-4.png" id="4_8yn62"]
+[ext_resource type="Texture2D" uid="uid://d1cdk6iff2hue" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/woman-walk/woman-walk-5.png" id="5_vju5l"]
+[ext_resource type="Texture2D" uid="uid://dcfoyuwaidw72" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/woman-walk/woman-walk-6.png" id="6_bqc78"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bv2t4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_o4sig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_egw34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nm35u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8yn62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vju5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bqc78")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8sio7"]
+radius = 12.0
+height = 46.0
+
+[node name="woman_enemy" type="CharacterBody2D"]
+script = ExtResource("1_lnf1j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bv2t4")
+animation = &"Walking"
+frame = 4
+frame_progress = 0.920914
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_8sio7")
