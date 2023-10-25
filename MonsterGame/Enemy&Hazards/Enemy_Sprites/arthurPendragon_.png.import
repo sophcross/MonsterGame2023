@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxf5jf5cynm41"
-path="res://.godot/imported/merlin_.png-bb4a219035c5c7ce53f33979a9aeddf7.ctex"
+uid="uid://bwulku8v8lguv"
+path="res://.godot/imported/arthurPendragon_.png-120417cb39797f424c2761fef0f251a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemy/Enemy_Sprites/merlin_.png"
-dest_files=["res://.godot/imported/merlin_.png-bb4a219035c5c7ce53f33979a9aeddf7.ctex"]
+source_file="res://Enemy&Hazards/Enemy_Sprites/arthurPendragon_.png"
+dest_files=["res://.godot/imported/arthurPendragon_.png-120417cb39797f424c2761fef0f251a0.ctex"]
 
 [params]
 

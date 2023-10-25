@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwulku8v8lguv"
-path="res://.godot/imported/arthurPendragon_.png-12dc86187ed3f94d2cba232e321b68dc.ctex"
+uid="uid://c572ikfcowf01"
+path="res://.godot/imported/mordred_.png-c251c30b592a459bab0be24dc3e6fc51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemy/Enemy_Sprites/arthurPendragon_.png"
-dest_files=["res://.godot/imported/arthurPendragon_.png-12dc86187ed3f94d2cba232e321b68dc.ctex"]
+source_file="res://Enemy&Hazards/Enemy_Sprites/mordred_.png"
+dest_files=["res://.godot/imported/mordred_.png-c251c30b592a459bab0be24dc3e6fc51.ctex"]
 
 [params]
 

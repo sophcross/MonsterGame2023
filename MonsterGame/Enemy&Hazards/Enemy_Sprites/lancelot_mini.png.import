@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b87iv15thutxq"
-path="res://.godot/imported/fisherKing_.png-0f079036659143ce9b5c4f1ae3fbae82.ctex"
+uid="uid://drm67mttlmi6g"
+path="res://.godot/imported/lancelot_mini.png-add901adfa3d740a8dd5f3e0dac464c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemy/Enemy_Sprites/fisherKing_.png"
-dest_files=["res://.godot/imported/fisherKing_.png-0f079036659143ce9b5c4f1ae3fbae82.ctex"]
+source_file="res://Enemy&Hazards/Enemy_Sprites/lancelot_mini.png"
+dest_files=["res://.godot/imported/lancelot_mini.png-add901adfa3d740a8dd5f3e0dac464c2.ctex"]
 
 [params]
 

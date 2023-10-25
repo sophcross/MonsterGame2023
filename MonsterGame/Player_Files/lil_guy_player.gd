@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Player
+
 @export var speed: float = 150.0
 @export var jump_velocity: float = -200.0
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -17,7 +19,7 @@ func _physics_process(delta):
 		land()
 		was_in_air = false
 
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor(): 
 		jump()
 	
 	direction = Input.get_vector("left", "right", "up", "down")

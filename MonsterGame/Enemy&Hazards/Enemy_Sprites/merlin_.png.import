@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4vw2xxmpukc0"
-path="res://.godot/imported/gawain_.png-dc13fdddba70775ed89bc7bd59b779be.ctex"
+uid="uid://dxf5jf5cynm41"
+path="res://.godot/imported/merlin_.png-2f1fa513739d10745135553ecee60c9f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemy/Enemy_Sprites/gawain_.png"
-dest_files=["res://.godot/imported/gawain_.png-dc13fdddba70775ed89bc7bd59b779be.ctex"]
+source_file="res://Enemy&Hazards/Enemy_Sprites/merlin_.png"
+dest_files=["res://.godot/imported/merlin_.png-2f1fa513739d10745135553ecee60c9f.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu1vwq5g1vibm"
-path="res://.godot/imported/dust_.png-7a4bf3fee6ad617bd40272157e85af4d.ctex"
+uid="uid://w5gsns3i01j3"
+path="res://.godot/imported/morganLeFay_.png-73bb6e5c5e057861f6141d2e73118fe9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemy/Enemy_Sprites/dust_.png"
-dest_files=["res://.godot/imported/dust_.png-7a4bf3fee6ad617bd40272157e85af4d.ctex"]
+source_file="res://Enemy&Hazards/Enemy_Sprites/morganLeFay_.png"
+dest_files=["res://.godot/imported/morganLeFay_.png-73bb6e5c5e057861f6141d2e73118fe9.ctex"]
 
 [params]
 

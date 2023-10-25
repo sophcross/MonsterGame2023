@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w5gsns3i01j3"
-path="res://.godot/imported/morganLeFay_.png-420f384ed138c4a87e497e1b40c3571c.ctex"
+uid="uid://dusagpbcyr83b"
+path="res://.godot/imported/lancelot_.png-ebec713762c19af87bf400fd969221d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemy/Enemy_Sprites/morganLeFay_.png"
-dest_files=["res://.godot/imported/morganLeFay_.png-420f384ed138c4a87e497e1b40c3571c.ctex"]
+source_file="res://Enemy&Hazards/Enemy_Sprites/lancelot_.png"
+dest_files=["res://.godot/imported/lancelot_.png-ebec713762c19af87bf400fd969221d6.ctex"]
 
 [params]
 

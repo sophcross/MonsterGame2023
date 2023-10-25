@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dusagpbcyr83b"
-path="res://.godot/imported/lancelot_.png-098a0133cf4f290b55eb1cdb65e2fee4.ctex"
+uid="uid://whk6bvrk156t"
+path="res://.godot/imported/guinevere_.png-9931690bc273f7f37c594f9731e996bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemy/Enemy_Sprites/lancelot_.png"
-dest_files=["res://.godot/imported/lancelot_.png-098a0133cf4f290b55eb1cdb65e2fee4.ctex"]
+source_file="res://Enemy&Hazards/Enemy_Sprites/guinevere_.png"
+dest_files=["res://.godot/imported/guinevere_.png-9931690bc273f7f37c594f9731e996bc.ctex"]
 
 [params]
 

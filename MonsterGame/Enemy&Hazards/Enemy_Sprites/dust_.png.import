@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vkr73kvhptrg"
-path="res://.godot/imported/ladyOfTheLake_.png-5b48498a8f0e28eb9b85c2102dc10894.ctex"
+uid="uid://bu1vwq5g1vibm"
+path="res://.godot/imported/dust_.png-d84a2f4d0a045861e2720a82d72d8c47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemy/Enemy_Sprites/ladyOfTheLake_.png"
-dest_files=["res://.godot/imported/ladyOfTheLake_.png-5b48498a8f0e28eb9b85c2102dc10894.ctex"]
+source_file="res://Enemy&Hazards/Enemy_Sprites/dust_.png"
+dest_files=["res://.godot/imported/dust_.png-d84a2f4d0a045861e2720a82d72d8c47.ctex"]
 
 [params]
 

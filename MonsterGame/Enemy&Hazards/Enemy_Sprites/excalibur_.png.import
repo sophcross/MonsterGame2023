@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://whk6bvrk156t"
-path="res://.godot/imported/guinevere_.png-c72b576515cb36b3c2e4a906e4abc401.ctex"
+uid="uid://msrerh412d3x"
+path="res://.godot/imported/excalibur_.png-bb34590e999b1f8e5b300cf1600df913.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemy/Enemy_Sprites/guinevere_.png"
-dest_files=["res://.godot/imported/guinevere_.png-c72b576515cb36b3c2e4a906e4abc401.ctex"]
+source_file="res://Enemy&Hazards/Enemy_Sprites/excalibur_.png"
+dest_files=["res://.godot/imported/excalibur_.png-bb34590e999b1f8e5b300cf1600df913.ctex"]
 
 [params]
 

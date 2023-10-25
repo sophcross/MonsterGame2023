@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c572ikfcowf01"
-path="res://.godot/imported/mordred_.png-2f1605051d70e9b9445384e23646b490.ctex"
+uid="uid://w4wd4xjso31n"
+path="res://.godot/imported/Spikes_1.png-d644853a3c7e5cf73a13636c477b1151.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemy/Enemy_Sprites/mordred_.png"
-dest_files=["res://.godot/imported/mordred_.png-2f1605051d70e9b9445384e23646b490.ctex"]
+source_file="res://Enemy&Hazards/Hazards_Sprites/Spikes_1.png"
+dest_files=["res://.godot/imported/Spikes_1.png-d644853a3c7e5cf73a13636c477b1151.ctex"]
 
 [params]
 

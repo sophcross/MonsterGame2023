@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://msrerh412d3x"
-path="res://.godot/imported/excalibur_.png-a9a287699ff29a8c28940e76e84a7a51.ctex"
+uid="uid://4vw2xxmpukc0"
+path="res://.godot/imported/gawain_.png-5a910352fb67a15256985c6233b7382b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemy/Enemy_Sprites/excalibur_.png"
-dest_files=["res://.godot/imported/excalibur_.png-a9a287699ff29a8c28940e76e84a7a51.ctex"]
+source_file="res://Enemy&Hazards/Enemy_Sprites/gawain_.png"
+dest_files=["res://.godot/imported/gawain_.png-5a910352fb67a15256985c6233b7382b.ctex"]
 
 [params]
 

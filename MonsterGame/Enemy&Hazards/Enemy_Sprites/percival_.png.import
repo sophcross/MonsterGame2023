@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w6jqrwp2rmvu"
-path="res://.godot/imported/staff_ [merlin].png-8a524b6f31aae7e7faa51f89b2e14a01.ctex"
+uid="uid://dhxncnpjaribt"
+path="res://.godot/imported/percival_.png-1abae32fc8a15bb7a60820e79d09456e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemy/Enemy_Sprites/staff_ [merlin].png"
-dest_files=["res://.godot/imported/staff_ [merlin].png-8a524b6f31aae7e7faa51f89b2e14a01.ctex"]
+source_file="res://Enemy&Hazards/Enemy_Sprites/percival_.png"
+dest_files=["res://.godot/imported/percival_.png-1abae32fc8a15bb7a60820e79d09456e.ctex"]
 
 [params]
 
