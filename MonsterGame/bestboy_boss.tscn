@@ -40,7 +40,7 @@ height = 42.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rt61d"]
 radius = 13.0
-height = 42.0
+height = 34.0
 
 [node name="bestboy_boss" type="CharacterBody2D"]
 script = ExtResource("1_db87b")
@@ -56,4 +56,7 @@ shape = SubResource("CapsuleShape2D_5550y")
 [node name="Hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, -3)
 shape = SubResource("CapsuleShape2D_rt61d")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

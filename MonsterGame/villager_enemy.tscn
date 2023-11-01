@@ -58,3 +58,5 @@ shape = SubResource("CapsuleShape2D_0f2jy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_7qq02")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
