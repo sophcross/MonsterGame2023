@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cop5rdd6ibtso"]
+[gd_scene load_steps=22 format=3 uid="uid://ctyrhdajhm1d0"]
 
 [ext_resource type="Script" path="res://Scripts/CheckpointToBoss.gd" id="1_rtych"]
 [ext_resource type="Texture2D" uid="uid://dhvveh65v5awh" path="res://Evironment/Castle/GateClose/GateClosing0.png" id="2_wqf31"]

@@ -19,6 +19,9 @@ var has_double_jumped : bool = false
 
 var health = 3
 
+func _ready():
+	GameManager.player = self
+
 func process_(delta):
 	if Input.is_action_just_pressed("attack"):
 		attack()
@@ -51,6 +54,8 @@ func _physics_process(delta):
 	move_and_slide()
 	update_animation()
 	update_facing_direction()
+	if position.y >= 700:
+		die()
 	
 func update_animation():
 	if !attacking:
@@ -91,8 +96,9 @@ func take_damage(damage):
 		die()
 		
 func die():
-	$".".position.x = 0
-	$".".position.y = -15
+	GameManager.respawn_player()
+	#$".".position.x = 0
+	#$".".position.y = -15
 
 func attack():
 	var overlapping_objects = $Attack_Area.get_overlapping_areas()
@@ -103,3 +109,5 @@ func attack():
 	
 	attacking = true
 	animated_sprite.play("Spit")
+
+	
