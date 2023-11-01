@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bbchpqm1w86d0"]
+[gd_scene load_steps=33 format=3 uid="uid://bbchpqm1w86d0"]
 
 [ext_resource type="TileSet" uid="uid://dn5m84ynqthj3" path="res://Land.tres" id="1_nxjpe"]
 [ext_resource type="Texture2D" uid="uid://c7cnbq3uqxrds" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/environment/layers/tileset.png" id="1_pyb7p"]
@@ -410,9 +410,6 @@ physics_layer_0/collision_layer = 8
 physics_layer_0/collision_mask = 8
 sources/0 = SubResource("TileSetAtlasSource_8if5u")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_khgnu"]
-size = Vector2(9, 28)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rhhuq"]
 size = Vector2(164, 15)
 
@@ -521,14 +518,6 @@ position = Vector2(0, -15)
 collision_layer = 31
 collision_mask = 31
 speed = 300.0
-
-[node name="LadderChecker" type="Area2D" parent="LilGuy-Player"]
-collision_layer = 4
-collision_mask = 4
-
-[node name="LadderCheck" type="CollisionShape2D" parent="LilGuy-Player/LadderChecker"]
-position = Vector2(-0.5, 2)
-shape = SubResource("RectangleShape2D_khgnu")
 
 [node name="Trees" type="TileMap" parent="."]
 tile_set = ExtResource("8_pfj8v")
@@ -816,6 +805,3 @@ position = Vector2(4632, 18)
 scale = Vector2(3, 3)
 collision_layer = 33
 collision_mask = 33
-
-[connection signal="body_entered" from="LilGuy-Player/LadderChecker" to="LilGuy-Player" method="_on_ladder_checker_body_entered"]
-[connection signal="body_exited" from="LilGuy-Player/LadderChecker" to="LilGuy-Player" method="_on_ladder_checker_body_exited"]

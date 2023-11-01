@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cv023hhsedcwa"]
+[gd_scene load_steps=11 format=3 uid="uid://cv023hhsedcwa"]
 
 [ext_resource type="Texture2D" uid="uid://blsop8g4aq4yp" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/hat-man-walk/hat-man-walk-1.png" id="1_5t7u3"]
 [ext_resource type="Script" path="res://villager_enemy.gd" id="1_r7mkc"]
@@ -37,6 +37,9 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0f2jy"]
 height = 54.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7qq02"]
+height = 54.0
+
 [node name="Villager_Enemy" type="CharacterBody2D"]
 script = ExtResource("1_r7mkc")
 
@@ -49,3 +52,9 @@ frame_progress = 0.911541
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_0f2jy")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_7qq02")

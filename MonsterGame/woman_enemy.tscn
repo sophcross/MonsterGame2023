@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cflbhxgeslfeh"]
+[gd_scene load_steps=11 format=3 uid="uid://cflbhxgeslfeh"]
 
 [ext_resource type="Script" path="res://woman_enemy.gd" id="1_lnf1j"]
 [ext_resource type="Texture2D" uid="uid://r12jqw25upj8" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/woman-walk/woman-walk-1.png" id="1_o4sig"]
@@ -38,6 +38,10 @@ animations = [{
 radius = 12.0
 height = 46.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mgqyx"]
+radius = 11.0
+height = 46.0
+
 [node name="woman_enemy" type="CharacterBody2D"]
 script = ExtResource("1_lnf1j")
 
@@ -49,3 +53,8 @@ frame_progress = 0.920914
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_8sio7")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CapsuleShape2D_mgqyx")
