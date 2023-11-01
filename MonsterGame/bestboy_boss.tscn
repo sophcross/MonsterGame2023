@@ -42,6 +42,7 @@ height = 42.0
 radius = 13.0
 
 [node name="bestboy_boss" type="CharacterBody2D"]
+scale = Vector2(3, 3)
 script = ExtResource("1_db87b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

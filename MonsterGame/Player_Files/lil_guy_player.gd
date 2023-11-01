@@ -4,6 +4,8 @@ class_name Player
 
 @export var attacking = false
 
+@export var double_jump_velocity : float = -200.0
+
 @export var speed: float = 150.0
 @export var jump_velocity: float = -200.0
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -12,6 +14,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var animation_locked: bool = false
 var direction: Vector2 = Vector2.ZERO
 var was_in_air: bool = false
+
+var has_double_jumped : bool = false
 
 var health = 3
 
@@ -23,12 +27,19 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		was_in_air = true
+	else:
+		has_double_jumped = false
+		
 	if was_in_air == true:
 		land()
 		was_in_air = false
 
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		jump()
+	if Input.is_action_just_pressed("jump"):
+		if is_on_floor():
+			jump()
+		elif not has_double_jumped:
+			velocity.y = double_jump_velocity
+			has_double_jumped = true
 	
 	direction = Input.get_vector("left", "right", "up", "down")
 

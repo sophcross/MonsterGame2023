@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bbchpqm1w86d0"]
+[gd_scene load_steps=34 format=3 uid="uid://bbchpqm1w86d0"]
 
 [ext_resource type="TileSet" uid="uid://dn5m84ynqthj3" path="res://Land.tres" id="1_nxjpe"]
 [ext_resource type="Texture2D" uid="uid://c7cnbq3uqxrds" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/environment/layers/tileset.png" id="1_pyb7p"]
@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://dnw3wc2snka3v" path="res://Player_Files/lil_guy_player.tscn" id="14_b8ucx"]
 [ext_resource type="Texture2D" uid="uid://dt4ui15p8f8vk" path="res://Forest of Illusion Files/Forest of Illusion Files/Layers/back.png" id="14_bt38f"]
 [ext_resource type="PackedScene" uid="uid://c7ltf3dhhw5x7" path="res://oldman_enemy.tscn" id="14_rcp2m"]
-[ext_resource type="PackedScene" uid="uid://qwu0l5uqpl5g" path="res://bestboy_boss.tscn" id="15_epua6"]
 [ext_resource type="Texture2D" uid="uid://dle0x13nxm5ds" path="res://Forest of Illusion Files/Forest of Illusion Files/Layers/middle.png" id="15_m725u"]
 [ext_resource type="PackedScene" uid="uid://bpe4v0tbdifmd" path="res://castle_transfer.tscn" id="16_k0hlm"]
 [ext_resource type="PackedScene" uid="uid://bc6kkhdfyaujj" path="res://spider_ghost.tscn" id="17_tb22c"]
@@ -754,6 +753,11 @@ position = Vector2(4029, 56)
 collision_layer = 32
 collision_mask = 32
 
+[node name="bumper18" parent="bumpers" instance=ExtResource("12_wtkly")]
+position = Vector2(4401, 53)
+collision_layer = 32
+collision_mask = 32
+
 [node name="bumper15" parent="bumpers" instance=ExtResource("12_wtkly")]
 position = Vector2(4784, 54)
 collision_layer = 32
@@ -796,8 +800,33 @@ position = Vector2(3662, -35)
 collision_layer = 33
 collision_mask = 33
 
+[node name="Villager_Enemy3" parent="enemies" instance=ExtResource("11_v204r")]
+position = Vector2(4517, 66)
+collision_layer = 33
+collision_mask = 33
+
+[node name="Villager_Enemy4" parent="enemies" instance=ExtResource("11_v204r")]
+position = Vector2(4235, 65)
+collision_layer = 33
+collision_mask = 33
+
+[node name="Villager_Enemy5" parent="enemies" instance=ExtResource("11_v204r")]
+position = Vector2(4118, 67)
+collision_layer = 33
+collision_mask = 33
+
 [node name="woman_enemy" parent="enemies" instance=ExtResource("13_kknk6")]
 position = Vector2(2425, -29)
+collision_layer = 33
+collision_mask = 33
+
+[node name="woman_enemy3" parent="enemies" instance=ExtResource("13_kknk6")]
+position = Vector2(4180, 68)
+collision_layer = 33
+collision_mask = 33
+
+[node name="woman_enemy4" parent="enemies" instance=ExtResource("13_kknk6")]
+position = Vector2(4463, 69)
 collision_layer = 33
 collision_mask = 33
 
@@ -816,9 +845,8 @@ position = Vector2(2769, -27)
 collision_layer = 33
 collision_mask = 33
 
-[node name="bestboy_boss" parent="enemies" instance=ExtResource("15_epua6")]
-position = Vector2(4632, 18)
-scale = Vector2(3, 3)
+[node name="oldman_enemy4" parent="enemies" instance=ExtResource("14_rcp2m")]
+position = Vector2(4620, 70)
 collision_layer = 33
 collision_mask = 33
 
