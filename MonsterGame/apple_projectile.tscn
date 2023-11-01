@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkcntkp5jpfg0"]
+
+[ext_resource type="Script" path="res://Apple_Projectile.gd" id="1_fylh3"]
+[ext_resource type="Texture2D" uid="uid://rqb7b42l47gd" path="res://Gothicvania Items Pack 1 Files/sprites/food/food-01.png" id="2_1ka6d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mnhel"]
+
+[node name="Apple_Projectile" type="Node2D"]
+script = ExtResource("1_fylh3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1ka6d")
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_mnhel")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

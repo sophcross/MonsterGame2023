@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c7ltf3dhhw5x7"]
+[gd_scene load_steps=17 format=3 uid="uid://c7ltf3dhhw5x7"]
 
 [ext_resource type="Script" path="res://oldman_enemy.gd" id="1_7ylbb"]
 [ext_resource type="Texture2D" uid="uid://bira8e6sn8hvn" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/sprites/oldman-walk/oldman-walk-1.png" id="2_5e05d"]
@@ -62,6 +62,10 @@ animations = [{
 radius = 13.0
 height = 44.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c21am"]
+radius = 13.0
+height = 44.0
+
 [node name="oldman_enemy" type="CharacterBody2D"]
 script = ExtResource("1_7ylbb")
 
@@ -73,3 +77,10 @@ frame_progress = 0.281716
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_naaay")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CapsuleShape2D_c21am")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

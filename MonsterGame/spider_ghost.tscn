@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://bc6kkhdfyaujj"]
+
+[ext_resource type="Script" path="res://spider_ghost.gd" id="1_21xm6"]
+[ext_resource type="Texture2D" uid="uid://brwx3id5nihf4" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-1.png" id="1_dn5je"]
+[ext_resource type="Texture2D" uid="uid://7dlj3ufhucuv" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-2.png" id="2_ho6ea"]
+[ext_resource type="Texture2D" uid="uid://cjjsc5rbjkha6" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-3.png" id="3_4lwvk"]
+[ext_resource type="Texture2D" uid="uid://kfpg350fjmap" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-4.png" id="4_lef84"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ubx63"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dn5je")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_dn5je")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ho6ea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4lwvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lef84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_dn5je")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_dn5je")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tbeuw"]
+radius = 16.0312
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_812en"]
+radius = 15.0
+
+[node name="SpiderGhost" type="CharacterBody2D"]
+script = ExtResource("1_21xm6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ubx63")
+animation = &"Idle"
+frame = 1
+frame_progress = 0.121863
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_tbeuw")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_812en")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
