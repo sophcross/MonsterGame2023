@@ -805,3 +805,5 @@ position = Vector2(4632, 18)
 scale = Vector2(3, 3)
 collision_layer = 33
 collision_mask = 33
+
+[node name="pickups" type="Node2D" parent="."]

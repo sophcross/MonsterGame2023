@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpe4v0tbdifmd"]
+
+[ext_resource type="Script" path="res://castle_transfer.gd" id="1_ebpml"]
+[ext_resource type="Texture2D" uid="uid://bdsimacsj0tdp" path="res://Gothicvania Items Pack 1 Files/sprites/keys/key-01.png" id="1_ghl2e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndol5"]
+size = Vector2(33, 32)
+
+[node name="CastleTransfer" type="Node2D"]
+script = ExtResource("1_ebpml")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_ghl2e")
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_ndol5")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
