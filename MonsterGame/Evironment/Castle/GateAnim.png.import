@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bukm3lgnu3wfh"
-path="res://.godot/imported/env_objects.png-551768c251fa4111e2d61c2b7f93723a.ctex"
+uid="uid://bu6etwmiuj8hw"
+path="res://.godot/imported/GateAnim.png-1187f549b6839f104befe145c82ffe91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Evironment/Castle/env_objects.png"
-dest_files=["res://.godot/imported/env_objects.png-551768c251fa4111e2d61c2b7f93723a.ctex"]
+source_file="res://Evironment/Castle/GateAnim.png"
+dest_files=["res://.godot/imported/GateAnim.png-1187f549b6839f104befe145c82ffe91.ctex"]
 
 [params]
 

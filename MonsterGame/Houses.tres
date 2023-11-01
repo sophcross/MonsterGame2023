@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://bmfsd01mx4oyx"]
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://cpngs7ilye66f"]
 
 [ext_resource type="Texture2D" uid="uid://bo85sakegc43n" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/tileset.png" id="1_0mm0x"]
 [ext_resource type="Texture2D" uid="uid://0xemkmocbk2r" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/GothicVania-town-files/PNG/environment/props/houses.png" id="2_spcyp"]
