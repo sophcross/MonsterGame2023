@@ -40,3 +40,5 @@ shape = SubResource("CapsuleShape2D_ynvbl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("CapsuleShape2D_unevu")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

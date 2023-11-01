@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=27 format=3 uid="uid://cattrktuiespj"]
+[gd_resource type="TileSet" load_steps=27 format=3 uid="uid://dn5m84ynqthj3"]
 
 [ext_resource type="Texture2D" uid="uid://bdlhwksy8w3jm" path="res://Forest of Illusion Files/Forest of Illusion Files/Layers/tiles.png" id="1_tyfi2"]
 [ext_resource type="Texture2D" uid="uid://dymyu0a4otnbb" path="res://Forest of Illusion Files/Forest of Illusion Files/Layers/Magic-Cliffs-Gamekit/Magic-Cliffs-Gamekit/Environment/PNG/tileset.png" id="2_al10t"]

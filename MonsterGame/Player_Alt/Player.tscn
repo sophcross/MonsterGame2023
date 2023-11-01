@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://cna5i4vk807in"]
+[gd_scene load_steps=35 format=3 uid="uid://cna5i4vk807in"]
 
 [ext_resource type="Script" path="res://Player_Alt/lil_guy_Alt.gd" id="1_nhle3"]
 [ext_resource type="Texture2D" uid="uid://cea776qwocpme" path="res://Player_Files/Lil'Guy/Jump-Fall/Jump-Fall-Frame-5.png" id="2_qs36r"]
@@ -296,10 +296,15 @@ radius = 9.09089
 radius = 7.64087
 height = 25.4702
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hnjmh"]
+
 [node name="LilGuy-Alt" type="CharacterBody2D"]
 position = Vector2(0, -2)
 script = ExtResource("1_nhle3")
-JUMP_VELOCITY = -250.0
+attacking = null
+double_jump_velocity = null
+speed = null
+jump_velocity = null
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -329,5 +334,11 @@ monitoring = false
 position = Vector2(0, 3)
 scale = Vector2(1.047, 0.863756)
 shape = SubResource("CapsuleShape2D_nvv0l")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_hnjmh")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

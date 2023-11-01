@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://p44rw4q5fpdf" path="res://Evironment/Castle/walls.png" id="1_8pldh"]
 [ext_resource type="Texture2D" uid="uid://ca66nee5f4p15" path="res://Evironment/Castle/walls_far.png" id="2_3qsdp"]
-[ext_resource type="Texture2D" uid="uid://bukm3lgnu3wfh" path="res://Evironment/Castle/env_objects.png" id="3_hq6vl"]
+[ext_resource type="Texture2D" uid="uid://df0x16hqnc3bx" path="res://Evironment/Castle/env_objects.png" id="3_hq6vl"]
 [ext_resource type="Texture2D" uid="uid://dub8xd2qsvcek" path="res://Evironment/Castle/ground.png" id="4_6m8mo"]
 [ext_resource type="Texture2D" uid="uid://53ydk05mg0co" path="res://Evironment/Castle/env_objects_far.png" id="5_0fg80"]
 

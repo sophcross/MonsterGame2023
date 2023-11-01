@@ -1,10 +1,10 @@
 [gd_scene load_steps=34 format=3 uid="uid://bbchpqm1w86d0"]
 
-[ext_resource type="TileSet" uid="uid://cattrktuiespj" path="res://Land.tres" id="1_nxjpe"]
+[ext_resource type="TileSet" uid="uid://dn5m84ynqthj3" path="res://Land.tres" id="1_nxjpe"]
 [ext_resource type="Texture2D" uid="uid://c7cnbq3uqxrds" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/environment/layers/tileset.png" id="1_pyb7p"]
-[ext_resource type="TileSet" uid="uid://de0hbmidywmbs" path="res://Props.tres" id="1_u7qsb"]
-[ext_resource type="TileSet" uid="uid://cf156u2ny8rlw" path="res://OneWay.tres" id="2_8tikn"]
-[ext_resource type="TileSet" uid="uid://cpngs7ilye66f" path="res://Houses.tres" id="7_8hpfq"]
+[ext_resource type="TileSet" uid="uid://bhq178k7ijq0w" path="res://Props.tres" id="1_u7qsb"]
+[ext_resource type="TileSet" uid="uid://btwvt7i8y8sdg" path="res://OneWay.tres" id="2_8tikn"]
+[ext_resource type="TileSet" uid="uid://bmfsd01mx4oyx" path="res://Houses.tres" id="7_8hpfq"]
 [ext_resource type="TileSet" uid="uid://bqxmiki0b2jw4" path="res://Enemy/TreesForeground.tres" id="8_pfj8v"]
 [ext_resource type="TileSet" uid="uid://bn5giyhupvsb7" path="res://Enemy/FrontGround.tres" id="10_mla0b"]
 [ext_resource type="PackedScene" uid="uid://cv023hhsedcwa" path="res://villager_enemy.tscn" id="11_v204r"]
@@ -515,10 +515,12 @@ scale = Vector2(1.79687, 1.96691)
 texture = ExtResource("15_m725u")
 
 [node name="LilGuy-Player" parent="." instance=ExtResource("14_b8ucx")]
-position = Vector2(0, -15)
+position = Vector2(-28, -23)
 collision_layer = 31
 collision_mask = 31
+double_jump_velocity = -170.0
 speed = 300.0
+jump_velocity = -170.0
 
 [node name="Trees" type="TileMap" parent="."]
 tile_set = ExtResource("8_pfj8v")
@@ -627,6 +629,21 @@ position = Vector2(3557, -160)
 shape = SubResource("RectangleShape2D_ks73t")
 one_way_collision = true
 
+[node name="BoxCollision10" type="CollisionShape2D" parent="TilesOneWay/StaticBody2D"]
+position = Vector2(4053, 32)
+shape = SubResource("RectangleShape2D_ks73t")
+one_way_collision = true
+
+[node name="BoxCollision11" type="CollisionShape2D" parent="TilesOneWay/StaticBody2D"]
+position = Vector2(4362, 50)
+shape = SubResource("RectangleShape2D_ks73t")
+one_way_collision = true
+
+[node name="BoxCollision12" type="CollisionShape2D" parent="TilesOneWay/StaticBody2D"]
+position = Vector2(4517, 64)
+shape = SubResource("RectangleShape2D_ks73t")
+one_way_collision = true
+
 [node name="DoubleBoxCollision" type="CollisionShape2D" parent="TilesOneWay/StaticBody2D"]
 position = Vector2(2229, -33)
 shape = SubResource("RectangleShape2D_uwirn")
@@ -641,6 +658,10 @@ shape = SubResource("RectangleShape2D_uwirn")
 
 [node name="DoubleBoxCollision3" type="CollisionShape2D" parent="TilesOneWay/StaticBody2D"]
 position = Vector2(3556, -129)
+shape = SubResource("RectangleShape2D_uwirn")
+
+[node name="DoubleBoxCollision5" type="CollisionShape2D" parent="TilesOneWay/StaticBody2D"]
+position = Vector2(4319, 49)
 shape = SubResource("RectangleShape2D_uwirn")
 
 [node name="LittleTreeLeft" type="CollisionShape2D" parent="TilesOneWay/StaticBody2D"]

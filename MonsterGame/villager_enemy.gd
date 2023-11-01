@@ -32,5 +32,5 @@ func shoot_projectile_in_random_direction():
 	pass
 
 func _on_hitbox_area_entered(area):
-	if area.get_parent() is Player:
+	if area.get_parent() is Player1:
 		area.get_parent().die()

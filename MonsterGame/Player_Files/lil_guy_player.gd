@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-class_name Player
+class_name Player1
 
 @export var attacking = false
 
@@ -20,7 +20,7 @@ var has_double_jumped : bool = false
 var health = 3
 
 func _ready():
-	GameManager.player = self
+	pass
 
 func process_(delta):
 	if Input.is_action_just_pressed("attack"):
@@ -96,9 +96,9 @@ func take_damage(damage):
 		die()
 		
 func die():
-	GameManager.respawn_player()
-	#$".".position.x = 0
-	#$".".position.y = -15
+	#GameManager.respawn_player()
+	$".".position.x = 0
+	$".".position.y = -15
 
 func attack():
 	var overlapping_objects = $Attack_Area.get_overlapping_areas()

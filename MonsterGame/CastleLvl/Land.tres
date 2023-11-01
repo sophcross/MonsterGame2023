@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bbvwmuqhantuc" path="res://Evironment/Castle/walls_side_top.png" id="3_5rgjx"]
 [ext_resource type="Texture2D" uid="uid://umv1hmjmmhd" path="res://Evironment/Castle/walls_side_top_far.png" id="4_ds4wm"]
 [ext_resource type="Texture2D" uid="uid://dub8xd2qsvcek" path="res://Evironment/Castle/ground.png" id="5_fq4kk"]
-[ext_resource type="Texture2D" uid="uid://bukm3lgnu3wfh" path="res://Evironment/Castle/env_objects.png" id="6_bmdig"]
+[ext_resource type="Texture2D" uid="uid://df0x16hqnc3bx" path="res://Evironment/Castle/env_objects.png" id="6_bmdig"]
 [ext_resource type="Texture2D" uid="uid://bakf22vun4srd" path="res://Forest of Illusion Files/country-platform-files/layers/GothicVania-town-files/PNG/environment/props/props.png" id="7_l35s6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rp17a"]
