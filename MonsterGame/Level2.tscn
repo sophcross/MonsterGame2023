@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dordorjg30t0g"]
+[gd_scene load_steps=10 format=3 uid="uid://dordorjg30t0g"]
 
 [ext_resource type="TileSet" uid="uid://b4qmw7bq5n0ct" path="res://CastleLvl/ONeWay.tres" id="1_o6gti"]
 [ext_resource type="TileSet" uid="uid://crt14r82qvns0" path="res://CastleLvl/Wallpaper.tres" id="2_nakt0"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dxbpai5vjmyl2" path="res://Enemy&Hazards/spikes.tscn" id="3_15vru"]
 [ext_resource type="PackedScene" uid="uid://b3ojy6knvab4c" path="res://Enemy&Hazards/knight.tscn" id="5_c84km"]
 [ext_resource type="PackedScene" uid="uid://cna5i4vk807in" path="res://Player_Alt/Player.tscn" id="5_qitby"]
+[ext_resource type="PackedScene" uid="uid://cu4x70st6jjc0" path="res://victory_pickup.tscn" id="7_iw2ql"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ue76m"]
 size = Vector2(39, 2.3125)
@@ -138,3 +139,8 @@ layer_0/tile_data = PackedInt32Array(82, 524291, 4, 83, 524291, 4, 65619, 458753
 
 [node name="Knight" parent="." instance=ExtResource("5_c84km")]
 position = Vector2(393, -522)
+
+[node name="pickups" type="Node2D" parent="."]
+
+[node name="VictoryPickup" parent="pickups" instance=ExtResource("7_iw2ql")]
+position = Vector2(1198, -234)

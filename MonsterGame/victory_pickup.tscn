@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cu4x70st6jjc0"]
+
+[ext_resource type="Script" path="res://victory_pickup.gd" id="1_bdl4j"]
+[ext_resource type="Texture2D" uid="uid://eiiom5ae61gw" path="res://Gothicvania Items Pack 1 Files/sprites/accesory/accesory-05.png" id="1_cpp4o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ujxs7"]
+radius = 19.105
+
+[node name="VictoryPickup" type="Node2D"]
+script = ExtResource("1_bdl4j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_cpp4o")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ujxs7")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
