@@ -146,160 +146,65 @@ position = Vector2(393, -522)
 position = Vector2(1198, -234)
 
 [node name="barriers" type="Node2D" parent="."]
-light_mask = 32
-visibility_layer = 32
 
 [node name="bumper" parent="barriers" instance=ExtResource("8_j3u7x")]
-light_mask = 32
-visibility_layer = 32
 position = Vector2(597, -539)
-collision_layer = 32
-collision_mask = 32
 
 [node name="bumper2" parent="barriers" instance=ExtResource("8_j3u7x")]
-light_mask = 32
-visibility_layer = 32
 position = Vector2(711, -540)
-collision_layer = 32
-collision_mask = 32
 
 [node name="bumper3" parent="barriers" instance=ExtResource("8_j3u7x")]
-light_mask = 32
-visibility_layer = 32
 position = Vector2(548, -441)
-collision_layer = 32
-collision_mask = 32
-
-[node name="bumper13" parent="barriers" instance=ExtResource("8_j3u7x")]
-light_mask = 32
-visibility_layer = 32
-position = Vector2(251, -442)
-collision_layer = 32
-collision_mask = 32
-
-[node name="bumper14" parent="barriers" instance=ExtResource("8_j3u7x")]
-light_mask = 32
-visibility_layer = 32
-position = Vector2(473, -442)
-collision_layer = 32
-collision_mask = 32
 
 [node name="bumper4" parent="barriers" instance=ExtResource("8_j3u7x")]
-light_mask = 32
-visibility_layer = 32
 position = Vector2(911, -441)
-collision_layer = 32
-collision_mask = 32
 
 [node name="bumper5" parent="barriers" instance=ExtResource("8_j3u7x")]
-light_mask = 32
-visibility_layer = 32
 position = Vector2(1011, -442)
-collision_layer = 32
-collision_mask = 32
 
 [node name="bumper6" parent="barriers" instance=ExtResource("8_j3u7x")]
-light_mask = 32
-visibility_layer = 32
 position = Vector2(1156, -441)
-collision_layer = 32
-collision_mask = 32
 
 [node name="bumper7" parent="barriers" instance=ExtResource("8_j3u7x")]
-light_mask = 32
-visibility_layer = 32
 position = Vector2(87, -538)
-collision_layer = 32
-collision_mask = 32
 
 [node name="bumper8" parent="barriers" instance=ExtResource("8_j3u7x")]
-light_mask = 32
-visibility_layer = 32
 position = Vector2(6, -536)
-collision_layer = 32
-collision_mask = 32
 
 [node name="bumper9" parent="barriers" instance=ExtResource("8_j3u7x")]
-light_mask = 32
-visibility_layer = 32
 position = Vector2(324, -538)
-collision_layer = 32
-collision_mask = 32
 
 [node name="bumper10" parent="barriers" instance=ExtResource("8_j3u7x")]
-light_mask = 32
-visibility_layer = 32
 position = Vector2(420, -535)
-collision_layer = 32
-collision_mask = 32
 
 [node name="bumper11" parent="barriers" instance=ExtResource("8_j3u7x")]
-light_mask = 32
-visibility_layer = 32
 position = Vector2(491, -216)
-collision_layer = 32
-collision_mask = 32
 
 [node name="bumper12" parent="barriers" instance=ExtResource("8_j3u7x")]
-light_mask = 32
-visibility_layer = 32
 position = Vector2(649, -218)
-collision_layer = 32
-collision_mask = 32
 
 [node name="enemies" type="Node2D" parent="."]
-light_mask = 33
-visibility_layer = 33
 
 [node name="Lancelot" parent="enemies" instance=ExtResource("9_ejo6j")]
-light_mask = 33
-visibility_layer = 33
 position = Vector2(516, -192)
-collision_layer = 33
-collision_mask = 33
 
 [node name="Lancelot2" parent="enemies" instance=ExtResource("9_ejo6j")]
-light_mask = 33
-visibility_layer = 33
 position = Vector2(280, -420)
-collision_layer = 33
-collision_mask = 33
 
 [node name="Lancelot6" parent="enemies" instance=ExtResource("9_ejo6j")]
-light_mask = 33
-visibility_layer = 33
 position = Vector2(34, -516)
-collision_layer = 33
-collision_mask = 33
 
 [node name="Lancelot3" parent="enemies" instance=ExtResource("9_ejo6j")]
-light_mask = 33
-visibility_layer = 33
 position = Vector2(623, -517)
-collision_layer = 33
-collision_mask = 33
 
 [node name="Lancelot4" parent="enemies" instance=ExtResource("9_ejo6j")]
-light_mask = 33
-visibility_layer = 33
 position = Vector2(575, -419)
-collision_layer = 33
-collision_mask = 33
 
 [node name="Lancelot5" parent="enemies" instance=ExtResource("9_ejo6j")]
-light_mask = 33
-visibility_layer = 33
 position = Vector2(1039, -420)
-collision_layer = 33
-collision_mask = 33
 
 [node name="bestboy_boss" parent="enemies" instance=ExtResource("10_fb8ih")]
-light_mask = 33
-visibility_layer = 33
 position = Vector2(990, -219)
-collision_layer = 33
-collision_mask = 33
 
 [node name="LilGuy-Player" parent="." instance=ExtResource("10_mnr4u")]
 position = Vector2(90, -22)
-jump_velocity = -200.0
