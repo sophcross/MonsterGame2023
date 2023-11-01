@@ -13,6 +13,9 @@ var was_in_air: bool = false
 
 var on_ladder = false
 
+func _ready():
+	GameManager.player = self
+
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -34,6 +37,9 @@ func _physics_process(delta):
 	move_and_slide()
 	update_animation()
 	update_facing_direction()
+	
+	if position.y >= 750:
+		die()
 	
 func update_animation():
 	if not animation_locked:
@@ -78,3 +84,6 @@ func _on_ladder_checker_body_entered(body):
 
 func _on_ladder_checker_body_exited(body):
 	on_ladder = false
+
+func die():
+	GameManager.respawn_player()

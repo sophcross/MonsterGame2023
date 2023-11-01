@@ -1,0 +1,168 @@
+[gd_scene load_steps=22 format=3 uid="uid://cop5rdd6ibtso"]
+
+[ext_resource type="Script" path="res://Scripts/CheckpointToBoss.gd" id="1_rtych"]
+[ext_resource type="Texture2D" uid="uid://dhvveh65v5awh" path="res://Evironment/Castle/GateClose/GateClosing0.png" id="2_wqf31"]
+[ext_resource type="Texture2D" uid="uid://df0x16hqnc3bx" path="res://Evironment/Castle/GateOpening.png" id="3_m24xs"]
+[ext_resource type="Texture2D" uid="uid://bqnfijn064pua" path="res://Evironment/Castle/OpenGate.png" id="4_hv1ob"]
+[ext_resource type="Texture2D" uid="uid://qy06p5p1snwl" path="res://Evironment/Castle/GateClose/GateClosing1.png" id="5_5rt31"]
+[ext_resource type="Texture2D" uid="uid://cuk5meo1kq0y7" path="res://Evironment/Castle/GateClose/GateClosing2.png" id="6_qj6ki"]
+[ext_resource type="Texture2D" uid="uid://crvyfql1qv4su" path="res://Evironment/Castle/GateClose/GateClosing3.png" id="7_qjqee"]
+[ext_resource type="Texture2D" uid="uid://durhnpuilbw7v" path="res://Evironment/Castle/GateClose/GateClosing4.png" id="8_637oa"]
+[ext_resource type="Texture2D" uid="uid://qbrw1ck4jei0" path="res://Evironment/Castle/GateClose/GateClosing5.png" id="9_507w3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rq45h"]
+size = Vector2(46, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5ea4"]
+atlas = ExtResource("3_m24xs")
+region = Rect2(250, 0, 50, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3g683"]
+atlas = ExtResource("3_m24xs")
+region = Rect2(200, 0, 50, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dluyl"]
+atlas = ExtResource("3_m24xs")
+region = Rect2(150, 0, 50, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohl4u"]
+atlas = ExtResource("3_m24xs")
+region = Rect2(100, 0, 50, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yul5o"]
+atlas = ExtResource("3_m24xs")
+region = Rect2(50, 0, 50, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cd6fc"]
+atlas = ExtResource("3_m24xs")
+region = Rect2(0, 0, 50, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w77t2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5ea4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3g683")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dluyl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohl4u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yul5o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cd6fc")
+}],
+"loop": false,
+"name": &"Closing",
+"speed": 12.0
+}]
+
+[sub_resource type="Animation" id="Animation_l026o"]
+resource_name = "Activated"
+length = 1.00001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_wqf31"), ExtResource("4_hv1ob"), ExtResource("5_5rt31"), ExtResource("6_qj6ki"), ExtResource("7_qjqee"), ExtResource("8_637oa"), ExtResource("9_507w3")]
+}
+
+[sub_resource type="Animation" id="Animation_jq4xs"]
+resource_name = "GateClose"
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5, 0.666667, 0.833333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D/AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"Closing", &"Closing"]
+}
+
+[sub_resource type="Animation" id="Animation_ieupo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D/AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Closing"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hl1a2"]
+_data = {
+"Activated": SubResource("Animation_l026o"),
+"GateClose": SubResource("Animation_jq4xs"),
+"RESET": SubResource("Animation_ieupo")
+}
+
+[node name="Checkpoint" type="Node2D"]
+script = ExtResource("1_rtych")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_wqf31")
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_rq45h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_w77t2")
+animation = &"Closing"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_hl1a2")
+}
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

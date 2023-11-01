@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dnw3wc2snka3v"]
+[gd_scene load_steps=34 format=3 uid="uid://dnw3wc2snka3v"]
 
 [ext_resource type="Texture2D" uid="uid://d2mehmdpkx5qh" path="res://Player_Files/Lil'Guy/Walking/Walking-Frame-1.png" id="1_5b2pd"]
 [ext_resource type="Script" path="res://Player_Files/lil_guy_player.gd" id="1_y5mlh"]
@@ -267,6 +267,10 @@ _data = {
 "Walking": SubResource("Animation_hevt5")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_od3er"]
+radius = 8.0
+height = 22.0
+
 [node name="LilGuy-Player" type="CharacterBody2D"]
 script = ExtResource("1_y5mlh")
 speed = 200.0
@@ -291,5 +295,11 @@ libraries = {
 position = Vector2(9, -54)
 offset = Vector2(0, 2)
 zoom = Vector2(2.4, 2.4)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_od3er")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
