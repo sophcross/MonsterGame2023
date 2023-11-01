@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dordorjg30t0g"]
+[gd_scene load_steps=12 format=3 uid="uid://dordorjg30t0g"]
 
 [ext_resource type="TileSet" uid="uid://b4qmw7bq5n0ct" path="res://CastleLvl/ONeWay.tres" id="1_o6gti"]
 [ext_resource type="TileSet" uid="uid://crt14r82qvns0" path="res://CastleLvl/Wallpaper.tres" id="2_nakt0"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://b3ojy6knvab4c" path="res://Enemy&Hazards/knight.tscn" id="5_c84km"]
 [ext_resource type="PackedScene" uid="uid://cna5i4vk807in" path="res://Player_Alt/Player.tscn" id="5_qitby"]
 [ext_resource type="PackedScene" uid="uid://cu4x70st6jjc0" path="res://victory_pickup.tscn" id="7_iw2ql"]
+[ext_resource type="PackedScene" uid="uid://d37gdyf7grdw1" path="res://bumper.tscn" id="8_j3u7x"]
+[ext_resource type="PackedScene" uid="uid://cjrva2lra41iq" path="res://lancelot.tscn" id="9_ejo6j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ue76m"]
 size = Vector2(39, 2.3125)
@@ -144,3 +146,61 @@ position = Vector2(393, -522)
 
 [node name="VictoryPickup" parent="pickups" instance=ExtResource("7_iw2ql")]
 position = Vector2(1198, -234)
+
+[node name="barriers" type="Node2D" parent="."]
+
+[node name="bumper" parent="barriers" instance=ExtResource("8_j3u7x")]
+position = Vector2(597, -539)
+
+[node name="bumper2" parent="barriers" instance=ExtResource("8_j3u7x")]
+position = Vector2(711, -540)
+
+[node name="bumper3" parent="barriers" instance=ExtResource("8_j3u7x")]
+position = Vector2(548, -441)
+
+[node name="bumper4" parent="barriers" instance=ExtResource("8_j3u7x")]
+position = Vector2(911, -441)
+
+[node name="bumper5" parent="barriers" instance=ExtResource("8_j3u7x")]
+position = Vector2(1011, -442)
+
+[node name="bumper6" parent="barriers" instance=ExtResource("8_j3u7x")]
+position = Vector2(1156, -441)
+
+[node name="bumper7" parent="barriers" instance=ExtResource("8_j3u7x")]
+position = Vector2(87, -538)
+
+[node name="bumper8" parent="barriers" instance=ExtResource("8_j3u7x")]
+position = Vector2(6, -536)
+
+[node name="bumper9" parent="barriers" instance=ExtResource("8_j3u7x")]
+position = Vector2(324, -538)
+
+[node name="bumper10" parent="barriers" instance=ExtResource("8_j3u7x")]
+position = Vector2(420, -535)
+
+[node name="bumper11" parent="barriers" instance=ExtResource("8_j3u7x")]
+position = Vector2(491, -216)
+
+[node name="bumper12" parent="barriers" instance=ExtResource("8_j3u7x")]
+position = Vector2(649, -218)
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="Lancelot" parent="enemies" instance=ExtResource("9_ejo6j")]
+position = Vector2(516, -192)
+
+[node name="Lancelot2" parent="enemies" instance=ExtResource("9_ejo6j")]
+position = Vector2(280, -420)
+
+[node name="Lancelot6" parent="enemies" instance=ExtResource("9_ejo6j")]
+position = Vector2(34, -516)
+
+[node name="Lancelot3" parent="enemies" instance=ExtResource("9_ejo6j")]
+position = Vector2(623, -517)
+
+[node name="Lancelot4" parent="enemies" instance=ExtResource("9_ejo6j")]
+position = Vector2(575, -419)
+
+[node name="Lancelot5" parent="enemies" instance=ExtResource("9_ejo6j")]
+position = Vector2(1039, -420)

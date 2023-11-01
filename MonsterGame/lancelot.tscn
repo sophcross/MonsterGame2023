@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjrva2lra41iq"]
+
+[ext_resource type="Script" path="res://Lancelot.gd" id="1_5nd6v"]
+[ext_resource type="Texture2D" uid="uid://drm67mttlmi6g" path="res://Enemy&Hazards/Enemy_Sprites/lancelot_mini.png" id="2_r77km"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cdk3v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_r77km")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_r77km")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ynvbl"]
+radius = 7.0
+height = 24.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_unevu"]
+radius = 7.0
+height = 24.0
+
+[node name="Lancelot" type="CharacterBody2D"]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_5nd6v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cdk3v")
+animation = &"Walking"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ynvbl")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CapsuleShape2D_unevu")
