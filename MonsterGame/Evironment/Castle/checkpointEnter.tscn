@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://dutdt6kcn7m5d"]
 
-[ext_resource type="Script" path="res://Scripts/Checkpoint.gd" id="1_cc3ps"]
+[ext_resource type="Script" path="res://Scripts/CheckpointClose.gd" id="1_f74fu"]
 [ext_resource type="Texture2D" uid="uid://df0x16hqnc3bx" path="res://Evironment/Castle/GateOpening.png" id="2_jpl8g"]
 [ext_resource type="Texture2D" uid="uid://qbrw1ck4jei0" path="res://Evironment/Castle/GateClose/GateClosing5.png" id="2_ksv0n"]
 [ext_resource type="Texture2D" uid="uid://bqnfijn064pua" path="res://Evironment/Castle/OpenGate.png" id="2_v0kaj"]
@@ -63,6 +63,22 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="Animation" id="Animation_l026o"]
+resource_name = "Activated"
+length = 1.00001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_sjkor"), ExtResource("2_v0kaj"), ExtResource("6_iwxl5"), ExtResource("7_n4x4n"), ExtResource("8_rmogj"), ExtResource("9_45hkl"), ExtResource("2_ksv0n")]
+}
+
 [sub_resource type="Animation" id="Animation_jq4xs"]
 resource_name = "GateClose"
 step = 0.166667
@@ -118,22 +134,6 @@ tracks/1/keys = {
 "values": [&"Closing"]
 }
 
-[sub_resource type="Animation" id="Animation_l026o"]
-resource_name = "Activated"
-length = 1.00001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0001, 0.2, 0.4, 0.6, 0.8, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("4_sjkor"), ExtResource("2_v0kaj"), ExtResource("6_iwxl5"), ExtResource("7_n4x4n"), ExtResource("8_rmogj"), ExtResource("9_45hkl"), ExtResource("2_ksv0n")]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hl1a2"]
 _data = {
 "Activated": SubResource("Animation_l026o"),
@@ -142,7 +142,8 @@ _data = {
 }
 
 [node name="Checkpoint" type="Node2D"]
-script = ExtResource("1_cc3ps")
+script = ExtResource("1_f74fu")
+spawnpoint = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("4_sjkor")

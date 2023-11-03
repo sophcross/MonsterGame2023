@@ -1,7 +1,5 @@
 extends Node2D
 
-@export var spawnpoint = false
-
 var activated = false
 
 func activate():
@@ -9,5 +7,7 @@ func activate():
 	$AnimationPlayer.play("Activated")
 
 func _on_area_2d_area_entered(area):
-	if area.get_parent() is Player:
+	if area.get_parent() is Player && !activated:
 		activate()
+		if activated:
+			get_tree().change_scene_to_file("res://BossLevel.tscn")
